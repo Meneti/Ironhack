@@ -8,8 +8,9 @@ class Knight
 
 	end
 	def can_move?(x,y)
-		if (horizontal_move(x,y,1) == "yes" && vertical_move(x,y,2)) == "yes" 
-			# || (horizontal_move(x,y,2) == "yes" && vertical_move(x,y,1)) == "yes"
+		change_in_x = (x - @x).abs 
+		change_in_y = (y - @y).abs 
+		if (change_in_x == 2 && change_in_y == 1) || (change_in_x == 1 && change_in_y == 2)
 		output = "yes"
 		else
 		output = "no"

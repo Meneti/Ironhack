@@ -18,9 +18,15 @@
 	 @cities_array.push (cities_name)
 	 puts "The #{@name} visited :#{@cities_array}"
 	end
-
  end
 
+class Motorcycle < Cars
+	def activate_camouflage
+		@motorcycle = true
+	end
+	def travel_to (cities_name)
+	
+end
  new_car = Car.new("Ferrari", "broom")
  new2_car = Car.new("Porsche", "Broooom")
 
@@ -30,6 +36,14 @@ new2_car.car_noise
 new_car.travel_to("Miami, Boston")
 new2_car.travel_to("NY, Dallas")
 
+puts ""
+puts ""
+puts "Motorcycle"
+new_motorcycle = Motorcyle.new("Yamaha")
+
+
+
 # Class method
 
 Car.star_wars_openinng
+

@@ -10,7 +10,7 @@ class Rook
 
 	end
 	def can_move?(x,y)
-		if horizontal_move(x,y,7) == "yes" || vertical_move(x,y,7) == "yes" 
+		if horizontal_move(x,y) == "yes" || vertical_move(x,y) == "yes" 
 		output = "yes"
 		else
 		output = "no"

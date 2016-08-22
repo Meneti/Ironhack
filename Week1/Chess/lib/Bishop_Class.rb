@@ -6,7 +6,7 @@ class Bishop
 		@color=color
 	end
 	def can_move?(x,y)
-			if diagonal_move(x,y,7) == "yes" 
+			if diagonal_move(x,y) == "yes" 
 			output = "yes"
 			else 
 			output = "no"
