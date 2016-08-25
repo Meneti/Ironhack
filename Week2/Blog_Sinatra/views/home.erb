@@ -1,0 +1,17 @@
+<h1>Welcome to the Blog</h1>
+
+<h2>See the latest posts below:</h2>
+
+ <ul>
+	<% @blog.post_container.each do |the_post| %>
+	<li>
+		Title: <%= the_post.title%> Posted: <%= the_post.date%> 
+	</li>
+	<% end%>
+ </ul>
+
+ <% @blog.post_container.each_with_index do |post, index| %>
+  <a href="/Post_in_full/<%= index %>"><%= post.title %></a>
+<% end %>
+
+<a href='/new_post'> <br> Create your post </a>
