@@ -1,0 +1,15 @@
+.blue { 
+background-color: blue;
+margin: 10px;
+border: 25px solid red;
+}
+
+#red { 
+background-color: red;
+margin: 10px;
+border: 25px solid blue;
+}
+
+h3 {
+padding: 20% 20%
+}

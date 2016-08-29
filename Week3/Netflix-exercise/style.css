@@ -1,0 +1,89 @@
+@font-face {
+	font-family: "Proxima Nova";
+	src: url("ProximaNova-Light.otf");
+	src: url("ProximaNova-Reg.otf");
+	src: url("ProximaNova-Sbold.otf");
+}
+
+.banner {
+ background-image: url("family.jpg");
+ height: 600px;
+ padding: 60px;
+ background-repeat: no-repeat;
+     
+}
+
+#logo{ 
+	position:absolute; top: 10px; left: 25px; z-index: 1;
+
+}
+
+.sentence {
+	background-color: #020104;
+	color: #fff;
+	opacity: 0.8;
+	padding: 90px 90px;
+	margin-top: 120px;
+	margin-left: 180px;
+	margin-right: 120px;
+	font-size: 50px;
+	font-family: "Proxima Nova";
+}
+
+.titlenewreleases {
+	font-size: 25px;
+	font-family: "Proxima Nova";
+	color: #020104;
+	margin-left: 30px;
+	margin-top: -10px;
+}
+
+#movie1{
+	margin-right: 40px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+#movie2{
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+#movie3{
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+#movie4{
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+#movie5{
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+
+#button1{
+	background-color: red;
+	color: #fff;
+	font-size: 20px;
+	font-family: "Proxima Nova";
+	padding: 10px 40px;
+	position:absolute; top: 30px; right: 90px; z-index: 1;
+	border: none;
+}
+
+#button2{
+	background-color: #5081c5;
+	color: #fff;
+	font-size: 20px;
+	font-family: "Proxima Nova";
+	padding: 10px 50px;
+	position:absolute; top: 420px; right: 450px; z-index: 1;
+	border: none;	
+}
+
+.footer {
+		background-color: #020104;
+		padding: 20px 65px;
+}
+
+
+
