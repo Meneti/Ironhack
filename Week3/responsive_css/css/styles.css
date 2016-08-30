@@ -1,0 +1,39 @@
+#header-image {
+	background-image: url("image.png");
+	background-repeat: no-repeat;
+	height: 600px;
+}
+
+
+@media screen and (min-width: 768px) {
+	#header-image {
+		background-image:url("extra-small.png");
+	}
+}
+
+@media screen and (min-width: 786px) {
+	#header-image {
+		background-image:url("small.png");
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#header-image {
+		background-image: url("image-medium.png");
+		height: 700px;
+	}
+}
+
+
+@media screen and (min-width: 1200px) {
+	#header-image {
+		background-image: url("large-image.png");
+		height: 800px;
+	}
+}
+
+
+
+
+
+
