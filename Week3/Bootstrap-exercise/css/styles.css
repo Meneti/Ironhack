@@ -1,0 +1,27 @@
+body {
+	background-image: url("back.jpeg");
+	background-repeat: no-repeat;
+	background-size: 1440px 800px;
+	font-family: Arial;
+	color:black;
+}
+
+.Top { 
+	border: none;
+}
+
+.Main { 
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dcd4f1;
+}
+
+.row {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dcd4f1;
+}
+
+#logo {
+	float: center;
+}
