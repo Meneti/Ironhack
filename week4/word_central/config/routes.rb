@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-
-	get '/', to: 'site#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+get "/" => "site#home"
 
-	get '/contact', to: 'site#contact'
+get "/text_inspections/new" => "text_inspections#new"
 
-	get'/say_name/:name', to: 'site#say_name'
+post "/text_inspections" => "text_inspections#create"
+
 end

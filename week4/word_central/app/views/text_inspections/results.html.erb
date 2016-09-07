@@ -1,0 +1,13 @@
+<h1>RESULTS</h1>
+<p> Your text: <%=@text %></p>
+<p> Number of words:<%= @word_count %></p>
+<p>Average person would take <%=(@word_count/275).to_f%> seconds to read your text </p>
+<p> <%= @counts %></p>
+<%=link_to "home", "/" %>
+
+
+
+<!-- Create the results view and use it to display the word count to the user.
+Display the original text to the user as well.
+Use the same 275 words per minute number that Medium uses to estimate the amount of seconds of reading time for the given text. Display that to the user in the results view as well.
+Add a link from the results view back to the home page! -->
