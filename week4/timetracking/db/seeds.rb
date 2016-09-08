@@ -7,6 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Project.create!(name: 'Ironhack', description: 'Ironhackis a...')
-Project.create!(name: 'Time tracking app')
-Project.create!(name: 'Recipes', description: 'Track my favorite recipes')
+ironhack = Project.create!(name: 'Ironhack', description: 'Ironhack is a...')
+time_tracking_app = Project.create!(name: 'Time tracking app')
+recipes = Project.create!(name: 'Recipes', description: 'Track my favorite recipes')
+
+ironhack.time_entries.create(hours: 1, minutes: 32)
+ironhack.time_entries.create(hours: 3, minutes: 32)
+ironhack.time_entries.create(hours: 7, minutes: 32)
+ironhack.time_entries.create(hours: 9, minutes: 32)
+ironhack.time_entries.create(hours: 8, minutes: 32)
+
+

@@ -9,6 +9,18 @@ class ProjectsController < ApplicationController
 		unless @project 
 			render "no_projects_found"
 		end
-
 	end
+	def new
+		@project = Project.new
+		#reduntant to have render new if name of method is same
+	end
+	def create
+		@project = Project.new(
+			name: params[:project][:name],
+			description: params[:project][:description]
+			)
+		@project.save
+		redirect_to "/projects/#{@project.id}"
+	end
+	
 end
