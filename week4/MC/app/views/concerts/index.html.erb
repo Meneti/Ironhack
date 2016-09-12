@@ -1,0 +1,18 @@
+<h1> Concerts </h1>
+<ul>
+  <% @concerts.each do |concert| %>
+    <li>
+     	<%= concert.artist%> 
+    </li>
+  <% end %>
+</ul>
+
+
+<h1> Today's Concerts </h1>
+<ul>
+  <% @concerts_today.each do |concert| %>
+    <li>
+     	<%= concert.artist%> 
+    </li>
+  <% end %>
+</ul>

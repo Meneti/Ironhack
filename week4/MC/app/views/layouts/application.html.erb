@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <header>
+<h1> Music Concerts </h1>
+
+  <ul>
+    <li>
+      <a href="/"> Home </a>
+    </li>
+
+    <li>
+      <a href="/concerts"> Concerts </a>
+    </li>
+  </ul>
+
+</header>
+
+  <head>
+    <title>MC</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ 
+    <%= yield %>
+  </body>
+  <footer>
+  <p> ______________________________________________ </p>
+  <p> www.musicconcert.com </p>  
+  <p> Facebook <p>
+
+ </footer>
+</html>

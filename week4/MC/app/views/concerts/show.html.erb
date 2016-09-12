@@ -1,0 +1,13 @@
+
+<h1><%= @concert.artist%> </h1>
+
+
+<p><%= @concert.city%> </p>
+<p><%= @concert.date %> </p>
+<p><%= @concert.venue %> </p>
+<p><%= @concert.description %> </p>
+<p><%= @concert.price %> </p>
+
+
+<!-- <a href="/concerts/:concert_id/comments/new">Leave your comment</a> -->
+<%= link_to "Leave your comment", new_concert_comment_path(@concert)%>

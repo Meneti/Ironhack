@@ -1,0 +1,22 @@
+<h2>Today's Concerts: </h2>
+
+<ul>
+  <% @concerts_today.each do |concert| %>
+    <li>
+     	<%= concert.artist%>
+    </li>
+  <% end %>
+</ul>
+
+<h2>This Month's Concerts: </h2>
+<ul>
+  <% @concerts_month.each do |concert| %>
+
+  <a href="/concerts/<%=concert.id%>"><li>
+		<%= concert.artist%></li></a>
+    
+  <% end %>
+</ul>
+
+
+ 
