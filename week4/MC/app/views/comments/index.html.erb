@@ -1,0 +1,9 @@
+<h2>Comments of <%= @concert.artist %></h2>
+  <div class="comments"><ul>
+  <% @concert.comments.each do |comment| %>
+    <li>
+      <%= comment.text%> 
+    </li>
+  <% end %>
+</ul>
+</div>

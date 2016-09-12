@@ -1,8 +1,7 @@
 <h2>Write your comment</h2>
 
 <%= form_for [@concert, @comment] do |f| %>
-  <%= f.label :text %>
   <%= f.text_area :text %>
-   <%= f.submit %>
+   <%= f.submit "submit" %>
 <% end %>
 
