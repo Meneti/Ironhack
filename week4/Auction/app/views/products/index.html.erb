@@ -1,0 +1,13 @@
+<h1>List of Products</h1>
+
+
+<ul>
+	<% @product.each do |product| %>
+		<li>
+			<%= product.title %> 
+			<%= product.description %>
+			<%= product.deadline %>
+		</li>
+		<% end %>
+
+</ul>

@@ -1,0 +1,10 @@
+<h2>Details <%= @contact.name%> </h2>
+
+<ul>
+	<li><%= @contact.name %></li>
+	<li><%= @contact.phonenumber %></li>
+	<li><%= @contact.address %></li>
+	<li><%= @contact.email %></li>
+</ul>
+
+<%= link_to "Create new contact", contacts_new_path %>
