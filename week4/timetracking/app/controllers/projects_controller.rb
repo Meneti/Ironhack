@@ -15,12 +15,16 @@ class ProjectsController < ApplicationController
 		#reduntant to have render new if name of method is same
 	end
 	def create
-		@project = Project.new(
-			name: params[:project][:name],
-			description: params[:project][:description]
-			)
-		@project.save
-		redirect_to "/projects/#{@project.id}"
+    # Create a new project from the parameters passed in the form
+    project = Project.new(
+      name: params[:project][:name],
+      description: params[:project][:description]
+    )
+    	if project.save
+   		 redirect_to "/projects/#{project.id}"
+  		else
+    	@project = project
+    	end
 	end
 	
 end
