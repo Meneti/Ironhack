@@ -2,8 +2,7 @@ class ConcertsController < ApplicationController
 
 	def index
     @concerts = Concert.order(artist: :asc)
-    @concerts_today = Concert.where(date: Time.now..Time.now.end_of_day)
-    @concerts_month = Concert.where(date: Time.now..Time.now.end_of_month)
+   
   end
 
 
