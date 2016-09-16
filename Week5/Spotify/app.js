@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
 	$(".js-search").on("click", searchArtist);
-	$(".js-search").on("click", showArtist);
-
+	
 	
 	function searchArtist (theEvent) {
 			theEvent.preventDefault();
@@ -19,19 +18,19 @@ $(document).ready(function () {
 	};
 	
 	function showArtist (response) {
-			var artistArray = response.artists.items;
+		console.log(response);
+		var artistArray = response.artists.items;
+		$('.js-artist-list').empty();
+		console.log(artistArray);
 
-			console.log(response);
+		artistArray.forEach(function (theArtist) {
 
-			artistArray.forEach(function (theArtist) {
-		var html = `
-			<li>
-			<p> ${theArtist.name} </p>
-			<img src = "${theArtist.images[0].url}">
-			 </li>
-			 `;
-		$('.js-artist-list').append(html);
-	});
+			if (theArtist.images.length > 0) {
+				var html = `<button data-id="${theArtist.id}" class= "js-album-list"> <p> ${theArtist.name} </p> <img src = "${theArtist.images[0].url}" width = "160"> </button>`;
+				$('.js-artist-list').append(html);
+			}
+		$(".js-albums-list").on("click", searchAlbums);
+		});
 	};
 
 function handleError (error) {
@@ -41,30 +40,37 @@ function handleError (error) {
 	
 
 
+function searchAlbums (theEvent) {
+	theEvent.preventDefault();
+	console.log("artist clicked");
+	 var artistId = $(theEvent.currentTarget).data("id");
+	 console.log('ID get is working: ${artistID}')
+		$.ajax ({
+			type: "GET",
+			url: `https://api.spotify.com/v1/artists/${artistId}/albums`,
+			success: showAlbums,
+			error: handleError,
+			});
+};
+	
+function showAlbums (response) {
+	
+	var artistArray = response.artists.items;
+	$('.js-albums-list').empty();
 
-function showAlbums (theEvent) {
+	artistArray.forEach(function (theArtist) {
 
-	var artistId = $(theEvent.currentTarget).data("artist-id");
+		if (theArtist.albums.length > 0) {
+			var html = `<button id="${theArtist.id}" class= "js-album-list"> <p> ${theArtist.name} </p> <img src = "${theArtist.images[0].url}" width = "160"> </button>`;
+			$('.js-artist-list').append(html);
+		}
 
-	var x = `
-		<li>
-			<h2>${theArtist.name}</h2>
-			<button class = "js-album-search"
-			data-x = "${theArtist.id}">
-			see ${theArtist.id}
-			</button>
-		</li>
-			`;
-
-
-$.ajax ({
-type: "GET",
-url: `https://api.spotify.com/v1/artists/${artistId}/albums/`,
-success: showAlbums,
-error: handleError,
 });
+
+
+
 };
 
-});
+
 
 
