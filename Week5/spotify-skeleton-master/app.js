@@ -41,20 +41,25 @@ function showTrack (response) {
 		$(".playaudio").attr("src",audio);
 		console.log(audio);
 
+		$(".btn-play").removeClass("disabled")
+		$(".btn-play").removeClass("playing")
+
+
 		
 		
 	};
 
 	function playTrack (theEvent) {
 		theEvent.preventDefault();
-	
-	$('.playaudio').trigger('play');
 
-	// $('.playaudio').trigger('pause');
+		$(".btn-play").toggleClass("playing")
+	
+	if ($("btn-play").hasClass("disabled")) {
+		$('.playaudio').trigger('play')}
+	else {$('.playaudio').trigger('pause')};
+
+	
 };
-
-	
-	
 
 	
 
