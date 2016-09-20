@@ -1,0 +1,17 @@
+
+<p>Sandwich</p>
+
+	<p>Name:<%= @the_sandwich.name %></p>
+	<p>Bread Type:<%= @the_sandwich.bread_type %></p>
+<ul class= "js-ingredient-list">
+	<% @the_sandwich.ingredients.each do |ingredient| %>
+	<li> Ingredients: <%= ingredient.name %>  <%= ingredient.calories %> </li>
+	<% end %>
+</ul>
+
+<ul> Available Ingredients: 
+<% @all_ingredients.each do |ingredient| %>
+	<li> <button data-sandwich= "<%= @the_sandwich.id %>" class= "js-ing-button" id="<%= ingredient.id %>"> <%= ingredient.name  %> - cal: <%= ingredient.calories  %> </button> </li>
+
+	<% end %>
+</ul>
